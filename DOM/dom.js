@@ -17,7 +17,7 @@ console.log(document.links);
 
 console.log(document.images);
 */
-
+/*
 //GET ELEMENT BY ID//
 
 //console.log(document.getElementById('header-title'));
@@ -29,6 +29,7 @@ var header = document.getElementById('main-header');
 //headerttitle.innerText='Goodbye';
 //console.log(headerttitle.innerText);
 //headerttitle.innerHTML='<h3>Hello</h3>';
+
 header.style.borderBottom = 'solid 3px #000';
 var additem=document.getElementById('main').firstElementChild;
 
@@ -37,6 +38,21 @@ additem.style.color= "green" ;
 additem.style.fontWeight='bold';
 
 
+*/
 
+//GET ELEMENTS BY CLASS NAME//
 
+var items= document.getElementsByClassName('list-group-item');
+console.log(items);
+console.log(items[1]);
+items[1].textContent='Hello 2';
+items[1].style.fontWeight='bold';
+items[1].style.backgroundColor='yellow';
 
+//Gives eRROR
+//items.style.backgroundColor='#f4f4f4';
+
+for(var i=0;i<items.length;i++){
+    items[i].style.backgroundColor='#f4f4f4';
+
+}
