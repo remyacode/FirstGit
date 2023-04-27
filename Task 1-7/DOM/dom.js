@@ -88,7 +88,7 @@ for(var i=0;i<li.length;i++){
 }
 
 */
-
+/*
 //QuerySElector//
 var header = document.querySelector('#main-header');
 header.style.borderBotton='solid 4pc #ccc';
@@ -128,3 +128,169 @@ for(var i=0;i<odd.length; i++){
 odd[i].style.backgroundColor='green';
 //even[i].style.backgroundColor='#ccc';
 }
+
+*/
+
+//TRAVERSING THE DOM//
+
+var  itemlist=document.querySelector('#items');
+//paretNode
+/*
+console.log(itemlist.parentNode);
+itemlist.parentNode.style.backgroundColor='#f4f4f4';
+console.log(itemlist.parentNode.parentNode.parentNode);
+
+
+//parentelement
+
+console.log(itemlist.parentElement);
+itemlist.parentElement.style.backgroundColor='#f4f4f4';
+console.log(itemlist.parentElement.parentElement.parentElement);
+
+
+//childnodes
+//console.log(itemlist.childNodes);
+
+console.log(itemlist.children);
+console.log(itemlist.children[1]);
+itemlist.children[1].style.backgroundColor='yellow';
+
+//firstchild
+console.log(itemlist.firstChild);
+
+//firstElementchild
+console.log(itemlist.firstElementChild);
+itemlist.firstElementChild.textContent='Hello 1';
+
+
+
+//lastchild
+console.log(itemlist.lastChild);
+
+//lastElementchild
+console.log(itemlist.lastElementChild);
+itemlist.lastElementChild.textContent='Hello 4';
+
+
+//next sibling
+
+console.log(itemlist.nextSibling);
+
+//next elementsibling
+
+console.log(itemlist.nextElementSibling);
+
+//previousSibling
+console.log(itemlist.previousSibling);
+
+//previouselementSibling
+console.log(itemlist.previousElementSibling);
+itemlist.previousElementSibling.style.color='green';
+
+
+*/
+
+//createlement
+
+//create a div
+
+var newdiv=document.createElement('div');
+
+//add class
+newdiv.className='hello';
+
+//add id
+newdiv.id='hello1';
+
+//add attribute
+newdiv.setAttribute('title','hello div');
+
+//create text node
+var newd=document.createTextNode('Hello World');
+//add text todvi
+newdiv.appendChild(newd);
+
+var contain=document.querySelector('header .container');
+var h1=document.querySelector('header h1');
+
+
+console.log(newdiv);
+
+newdiv.style.fontSize='30px';
+
+contain.insertBefore(newdiv,h1);
+
+/////////////////////////////////
+
+//Hello World b4 item1
+
+
+//createlement
+
+//create a div
+
+var newdiv2=document.createElement('div');
+
+//add class
+newdiv2.className='hello';
+
+//add id
+newdiv2.id='hello2';
+
+//add attribute
+newdiv2.setAttribute('title','hello div');
+
+//create text node
+//var newd2=document.createTextNode('Hello World');
+//add text todvi
+newdiv2.appendChild(newd);
+
+var contain=document.querySelector('.container #main');
+var h2=document.querySelector('.container ul');
+
+
+console.log(newdiv2);
+
+newdiv2.style.fontSize='30px';
+
+contain.insertBefore(newdiv2,h2);
+
+
+///////////////////////////////////
+
+//Hello World b4 item1 as listitem
+/*
+
+//createlement
+
+//create a div
+
+var newdiv2=document.createElement('div');
+
+//add class
+newdiv2.className='list-group-item';
+
+//add id
+newdiv2.id='hello2';
+
+//add attribute
+newdiv2.setAttribute('title','hello div');
+
+//create text node
+//var newd2=document.createTextNode('Hello World');
+//add text todvi
+newdiv2.appendChild(newd);
+
+var contain=document.querySelector('.container #main #items');
+var h2=document.querySelector('.container ul li');
+
+
+console.log(newdiv2);
+
+newdiv2.style.fontSize='30px';
+
+contain.insertBefore(newdiv2,h2);
+
+*/
+
+
