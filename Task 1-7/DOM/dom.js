@@ -135,7 +135,7 @@ odd[i].style.backgroundColor='green';
 
 var  itemlist=document.querySelector('#items');
 //paretNode
-/*
+
 console.log(itemlist.parentNode);
 itemlist.parentNode.style.backgroundColor='#f4f4f4';
 console.log(itemlist.parentNode.parentNode.parentNode);
@@ -188,7 +188,7 @@ console.log(itemlist.previousElementSibling);
 itemlist.previousElementSibling.style.color='green';
 
 
-*/
+
 
 //createlement
 
