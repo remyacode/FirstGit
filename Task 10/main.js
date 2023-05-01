@@ -51,12 +51,25 @@ function onSubmit(e){
   //append text node delete
   delBtn.appendChild(document.createTextNode('Delete'));
 
+  //////////////EDIT//////////////
+
+  const edBtn=document.createElement('button');
+        
+  //add classes to delete button
+edBtn.className='btn btn-danger btn-sm float-right edit';
+edBtn.id='ed';
+//append text node delete
+edBtn.appendChild(document.createTextNode('Edit'));
+
+  ///////////////////////////////
+
 
   li.appendChild(document.createTextNode(`${nameInput.value}:${emailInput.value}`));
 
 
       //append button to li
       li.appendChild(delBtn);
+      li.appendChild(edBtn);
 
         //localStorage.setItem('Name',nameInput.value);
         //console.log(localStorage.getItem('Name'));
@@ -86,15 +99,14 @@ function onSubmit(e){
      
         let obd=JSON.parse(localStorage.getItem(emailInput.value));
         //console.log(obd);
-        //delBtn.addEventListener('click',removeItem);
-
+        delBtn.addEventListener('click',removeItems);
+        edBtn.addEventListener('click',edititems);
         ////
-        delBtn.onclick=(e)=>{
+        function removeItems(e){
             localStorage.removeItem(ob.Email);
-            
-            ////////
             var itemList=document.getElementById('listitem').parentNode;
-        if(e.target.classList.contains('delete')){
+            ////////
+            if(e.target.classList.contains('delete') || e.target.classList.contains('edit')){
         //if(confirm('Are you Sure?')){
             var li=e.target.parentElement;
             
@@ -106,6 +118,12 @@ function onSubmit(e){
             /////////
 
 
+            }
+
+            function edititems(e){
+                removeItems(e);
+                nameInput.value=ob.Name;
+                emailInput.value=ob.Email;
             }
 
         }
