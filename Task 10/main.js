@@ -54,13 +54,13 @@ function onSubmit(e){
         };
 
         let obs=JSON.stringify(ob);
-        localStorage.setItem('UserDetails',obs);
+        localStorage.setItem(emailInput.value,obs);
         userList.appendChild(li);
         
 
         //getting deserialised
      
-        let obd=JSON.parse(localStorage.getItem("UserDetails"));
+        let obd=JSON.parse(localStorage.getItem(emailInput.value));
         console.log(obd);
 
         //Clear
