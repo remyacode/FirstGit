@@ -38,13 +38,30 @@ function onSubmit(e){
     else{
         const li=document.createElement('li');
         li.appendChild(document.createTextNode(`${nameInput.value}:${emailInput.value}`));
-        localStorage.setItem('Name',nameInput.value);
-        console.log(localStorage.getItem('Name'));
-        localStorage.setItem('Email',emailInput.value);
-        console.log(localStorage.getItem('Email'));
+        //localStorage.setItem('Name',nameInput.value);
+        //console.log(localStorage.getItem('Name'));
+        //localStorage.setItem('Email',emailInput.value);
+        //console.log(localStorage.getItem('Email'));
         //localStorage.setItem(nameInput.value,emailInput.value);
         //console.log(localStorage.getItem(nameInput.value));
+
+
+        /////LOCAL STORAGE AS OBJECT
+
+        let ob={
+            "Name":nameInput.value,
+            "Email":emailInput.value
+        };
+
+        let obs=JSON.stringify(ob);
+        localStorage.setItem('UserDetails',obs);
         userList.appendChild(li);
+        
+
+        //getting deserialised
+     
+        let obd=JSON.parse(localStorage.getItem("UserDetails"));
+        console.log(obd);
 
         //Clear
         nameInput.value='';
